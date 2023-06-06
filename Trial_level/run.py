@@ -9,7 +9,7 @@ def prep_data():
     gaze_df['subID'] = gaze_df['subID'].astype('string')
 
     gaze_df['subject'] = gaze_df['subID'].str[-2:]
-    gaze_df['subID'] = gaze_df['subID'].astype('string')
+    gaze_df['subID'] = gaze_df['subID'].astype('int8')
     
     gaze_df.sort_values(by=['subject','trial'],inplace=True)
     gaze_df.pop('subject')
